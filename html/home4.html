@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Shivam ❤️</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+height:100vh;
+
+overflow:hidden;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:
+radial-gradient(circle,#ff758c,#c31432);
+
+color:white;
+
+text-align:center;
+
+}
+
+
+
+/* Fireworks */
+
+
+.firework{
+
+position:absolute;
+
+width:8px;
+
+height:8px;
+
+background:white;
+
+border-radius:50%;
+
+animation:explode 2s infinite;
+
+}
+
+
+
+@keyframes explode{
+
+
+0%{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+
+100%{
+
+transform:
+translate(
+calc(-200px + 400px * var(--x)),
+calc(-200px + 400px * var(--y))
+)
+scale(0);
+
+opacity:0;
+
+}
+
+}
+
+
+
+
+.container{
+
+z-index:5;
+
+animation:show 3s;
+
+padding:30px;
+
+}
+
+
+
+@keyframes show{
+
+from{
+
+opacity:0;
+
+transform:scale(.3);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+
+
+h1{
+
+
+font-family:'Great Vibes',cursive;
+
+font-size:90px;
+
+text-shadow:
+
+0 0 20px white,
+0 0 40px pink;
+
+
+}
+
+
+
+.name{
+
+font-family:'Dancing Script',cursive;
+
+font-size:60px;
+
+margin:20px;
+
+
+}
+
+
+
+
+.message{
+
+
+font-family:'Dancing Script',cursive;
+
+font-size:35px;
+
+line-height:1.7;
+
+
+}
+
+
+
+.heart{
+
+position:absolute;
+
+font-size:30px;
+
+animation:heart 5s linear infinite;
+
+
+}
+
+
+
+@keyframes heart{
+
+
+from{
+
+bottom:-50px;
+
+opacity:1;
+
+}
+
+
+to{
+
+bottom:110vh;
+
+opacity:0;
+
+}
+
+}
+
+
+
+
+
+button{
+
+
+margin-top:35px;
+
+padding:15px 45px;
+
+border:none;
+
+border-radius:50px;
+
+font-size:20px;
+
+background:white;
+
+color:#d6336c;
+
+cursor:pointer;
+
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="container">
+
+
+<h1>
+Happy Birthday
+</h1>
+
+
+<div class="name">
+
+My Babyy Shivam ❤️
+
+</div>
+
+
+
+<div class="message">
+
+
+I love you sooo muchhh ❤️
+
+
+Thank you for coming into my life
+and making it more beautiful.
+
+
+You are my happiness,
+my biggest blessing,
+and my forever.
+
+
+I hope your smile stays forever
+and all your dreams come true.
+
+
+No matter what happens,
+I will always choose you.
+
+
+Happy Birthday My Love 🎂❤️
+
+
+Forever yours 💋
+
+
+</div>
+
+
+
+<button onclick="love()">
+
+One More Surprise 💕
+
+</button>
+
+
+</div>
+
+
+
+
+
+<script>
+
+
+// fireworks
+
+function fireworks(){
+
+
+for(let i=0;i<80;i++){
+
+
+let f=document.createElement("div");
+
+f.className="firework";
+
+
+f.style.left="50%";
+
+f.style.top="50%";
+
+
+f.style.setProperty("--x",Math.random());
+
+f.style.setProperty("--y",Math.random());
+
+
+f.style.background=
+`hsl(${Math.random()*360},100%,70%)`;
+
+
+document.body.appendChild(f);
+
+
+setTimeout(()=>{
+
+f.remove();
+
+},2000);
+
+
+}
+
+
+}
+
+
+
+setInterval(fireworks,1500);
+
+
+
+
+// floating hearts
+
+for(let i=0;i<60;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.animationDuration=
+(4+Math.random()*6)+"s";
+
+
+document.body.appendChild(h);
+
+
+}
+
+
+
+
+function love(){
+
+alert(
+"❤️ I Love You Forever Shivam ❤️\n\nYou are my favorite person forever."
+);
+
+}
+
+
+</script>
+
+
+
+</body>
+
+</html>
