@@ -1,373 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>A Letter For You ❤️</title>
+<title>For My Love ❤️</title>
 
-
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
 <style>
 
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-
 
 body{
-
-min-height:100vh;
-
-background:
-linear-gradient(135deg,#ffafbd,#ffc3a0);
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-padding:30px;
-
-overflow:hidden;
-
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#ff9a9e,#fecfef,#fad0c4);
+    overflow:hidden;
+    font-family:'Poppins',sans-serif;
 }
 
-
-
-/* Floating roses */
-
-
-.rose{
-
-position:absolute;
-
-bottom:-50px;
-
-font-size:30px;
-
-animation:rise 10s linear infinite;
-
+.container{
+    text-align:center;
+    z-index:100;
+    padding:30px;
 }
-
-
-
-@keyframes rise{
-
-
-from{
-
-transform:translateY(0) rotate(0);
-
-opacity:1;
-
-}
-
-
-to{
-
-transform:translateY(-120vh) rotate(360deg);
-
-opacity:0;
-
-}
-
-
-}
-
-
-
-
-/* Letter */
-
-
-.letter{
-
-
-background:#fff8f0;
-
-
-width:90%;
-
-max-width:850px;
-
-
-padding:50px;
-
-
-border-radius:15px;
-
-
-box-shadow:
-
-0 20px 50px rgba(0,0,0,.25);
-
-
-color:#6b3048;
-
-
-position:relative;
-
-
-animation:open 2s;
-
-
-}
-
-
-
-@keyframes open{
-
-
-from{
-
-opacity:0;
-
-transform:rotateX(90deg);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:rotateX(0);
-
-}
-
-}
-
-
 
 h1{
-
-
-font-family:'Great Vibes',cursive;
-
-
-font-size:70px;
-
-
-text-align:center;
-
-
-color:#d6336c;
-
-
-margin-bottom:30px;
-
-
+    font-family:'Great Vibes',cursive;
+    font-size:80px;
+    color:white;
+    text-shadow:0 0 15px rgba(255,255,255,.8);
+    margin-bottom:20px;
 }
 
-
-
-.text{
-
-
-font-family:'Dancing Script',cursive;
-
-
-font-size:32px;
-
-
-line-height:1.8;
-
-
-white-space:pre-line;
-
-
+p{
+    color:white;
+    font-size:24px;
+    max-width:700px;
+    margin:auto;
+    line-height:1.8;
+    margin-bottom:45px;
 }
-
-
-
-.signature{
-
-
-font-family:'Great Vibes',cursive;
-
-
-font-size:55px;
-
-
-text-align:right;
-
-
-margin-top:30px;
-
-
-color:#d6336c;
-
-
-}
-
-
 
 button{
-
-
-display:block;
-
-margin:40px auto 0;
-
-
-padding:15px 45px;
-
-
-border:none;
-
-
-border-radius:40px;
-
-
-background:#d6336c;
-
-
-color:white;
-
-
-font-size:20px;
-
-
-cursor:pointer;
-
-
-transition:.3s;
-
-
+    padding:18px 45px;
+    font-size:24px;
+    border:none;
+    border-radius:50px;
+    cursor:pointer;
+    background:#ff2d75;
+    color:white;
+    font-weight:bold;
+    transition:.4s;
+    box-shadow:0 10px 25px rgba(255,45,117,.45);
 }
-
-
 
 button:hover{
-
-transform:scale(1.1);
-
-background:#b52a59;
-
+    transform:scale(1.08);
+    background:#ff0066;
+    box-shadow:0 15px 35px rgba(255,45,117,.7);
 }
 
+.heart{
+    position:absolute;
+    top:-50px;
+    animation:fall linear infinite;
+    pointer-events:none;
+}
 
+@keyframes fall{
+
+0%{
+    transform:translateY(-50px) rotate(0deg);
+    opacity:1;
+}
+
+100%{
+    transform:translateY(110vh) rotate(360deg);
+    opacity:0;
+}
+
+}
 
 </style>
 
 </head>
 
-
-
 <body>
 
+<div class="container">
 
+<h1>Just One More Surprise ❤️</h1>
 
-<div id="roses"></div>
-
-
-
-<div class="letter">
-
-
-<h1>
-My Love ❤️
-</h1>
-
-
-
-<div class="text">
-
-
-Dear My Favorite Person,
-
-
-I don't know if words can ever truly explain
-how much you mean to me.
-
-You came into my life and made it brighter.
-You turned normal moments into beautiful memories.
-
-Your smile is my favorite view.
-Your voice is my favorite sound.
-And your happiness is something I will always care about.
-
-Thank you for loving me,
-for understanding me,
-and for being my safe place.
-
-On your birthday, I want you to remember one thing...
-
-You are deeply loved.
-You are incredibly special.
-And you will always have a piece of my heart.
-
-I promise to keep making memories with you,
-to support your dreams,
-and to choose you again and again.
-
-Happy Birthday, My Love ❤️
-
-Forever yours...
-
-
-</div>
-
-
-<div class="signature">
-
-❤️ Yours Always
-
-</div>
-
-
+<p>
+Every little moment with you feels magical. Before you continue, I have something special waiting for you. I hope this little surprise brings a smile to your face, just like you bring one to mine every single day. 💕
+</p>
 
 <button onclick="nextPage()">
-
-Our Memories 📸
-
+💖 Press it, Babyy 💖
 </button>
 
-
 </div>
-
-
-
 
 <script>
 
+for(let i=0;i<60;i++){
 
-// roses
+let heart=document.createElement("div");
 
-for(let i=0;i<40;i++){
+heart.className="heart";
 
-let rose=document.createElement("div");
+heart.innerHTML="❤️";
 
-rose.className="rose";
+heart.style.left=Math.random()*100+"vw";
 
-rose.innerHTML="🌹";
+heart.style.fontSize=(18+Math.random()*28)+"px";
 
+heart.style.animationDuration=(5+Math.random()*6)+"s";
 
-rose.style.left=Math.random()*100+"vw";
+heart.style.animationDelay=Math.random()*5+"s";
 
-rose.style.animationDuration=
-(5+Math.random()*8)+"s";
-
-
-rose.style.fontSize=
-(20+Math.random()*25)+"px";
-
-
-document.body.appendChild(rose);
+document.body.appendChild(heart);
 
 }
-
-
-
 
 function nextPage(){
 
@@ -375,10 +137,7 @@ window.location.href="home3.html";
 
 }
 
-
 </script>
 
-
 </body>
-
 </html>
