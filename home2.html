@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Letter For You ❤️</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
+
+
+<style>
+
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+min-height:100vh;
+
+background:
+linear-gradient(135deg,#ffafbd,#ffc3a0);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+padding:30px;
+
+overflow:hidden;
+
+}
+
+
+
+/* Floating roses */
+
+
+.rose{
+
+position:absolute;
+
+bottom:-50px;
+
+font-size:30px;
+
+animation:rise 10s linear infinite;
+
+}
+
+
+
+@keyframes rise{
+
+
+from{
+
+transform:translateY(0) rotate(0);
+
+opacity:1;
+
+}
+
+
+to{
+
+transform:translateY(-120vh) rotate(360deg);
+
+opacity:0;
+
+}
+
+
+}
+
+
+
+
+/* Letter */
+
+
+.letter{
+
+
+background:#fff8f0;
+
+
+width:90%;
+
+max-width:850px;
+
+
+padding:50px;
+
+
+border-radius:15px;
+
+
+box-shadow:
+
+0 20px 50px rgba(0,0,0,.25);
+
+
+color:#6b3048;
+
+
+position:relative;
+
+
+animation:open 2s;
+
+
+}
+
+
+
+@keyframes open{
+
+
+from{
+
+opacity:0;
+
+transform:rotateX(90deg);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:rotateX(0);
+
+}
+
+}
+
+
+
+h1{
+
+
+font-family:'Great Vibes',cursive;
+
+
+font-size:70px;
+
+
+text-align:center;
+
+
+color:#d6336c;
+
+
+margin-bottom:30px;
+
+
+}
+
+
+
+.text{
+
+
+font-family:'Dancing Script',cursive;
+
+
+font-size:32px;
+
+
+line-height:1.8;
+
+
+white-space:pre-line;
+
+
+}
+
+
+
+.signature{
+
+
+font-family:'Great Vibes',cursive;
+
+
+font-size:55px;
+
+
+text-align:right;
+
+
+margin-top:30px;
+
+
+color:#d6336c;
+
+
+}
+
+
+
+button{
+
+
+display:block;
+
+margin:40px auto 0;
+
+
+padding:15px 45px;
+
+
+border:none;
+
+
+border-radius:40px;
+
+
+background:#d6336c;
+
+
+color:white;
+
+
+font-size:20px;
+
+
+cursor:pointer;
+
+
+transition:.3s;
+
+
+}
+
+
+
+button:hover{
+
+transform:scale(1.1);
+
+background:#b52a59;
+
+}
+
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+
+<div id="roses"></div>
+
+
+
+<div class="letter">
+
+
+<h1>
+My Love ❤️
+</h1>
+
+
+
+<div class="text">
+
+
+Dear My Favorite Person,
+
+
+I don't know if words can ever truly explain
+how much you mean to me.
+
+You came into my life and made it brighter.
+You turned normal moments into beautiful memories.
+
+Your smile is my favorite view.
+Your voice is my favorite sound.
+And your happiness is something I will always care about.
+
+Thank you for loving me,
+for understanding me,
+and for being my safe place.
+
+On your birthday, I want you to remember one thing...
+
+You are deeply loved.
+You are incredibly special.
+And you will always have a piece of my heart.
+
+I promise to keep making memories with you,
+to support your dreams,
+and to choose you again and again.
+
+Happy Birthday, My Love ❤️
+
+Forever yours...
+
+
+</div>
+
+
+<div class="signature">
+
+❤️ Yours Always
+
+</div>
+
+
+
+<button onclick="nextPage()">
+
+Our Memories 📸
+
+</button>
+
+
+</div>
+
+
+
+
+<script>
+
+
+// roses
+
+for(let i=0;i<40;i++){
+
+let rose=document.createElement("div");
+
+rose.className="rose";
+
+rose.innerHTML="🌹";
+
+
+rose.style.left=Math.random()*100+"vw";
+
+rose.style.animationDuration=
+(5+Math.random()*8)+"s";
+
+
+rose.style.fontSize=
+(20+Math.random()*25)+"px";
+
+
+document.body.appendChild(rose);
+
+}
+
+
+
+
+function nextPage(){
+
+window.location.href="home3.html";
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>

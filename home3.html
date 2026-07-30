@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Shivam ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+
+body{
+
+min-height:100vh;
+
+background:
+linear-gradient(135deg,#ff758c,#ff7eb3);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+overflow:hidden;
+
+padding:30px;
+
+}
+
+
+/* Background hearts */
+
+.heart{
+
+position:absolute;
+
+bottom:-50px;
+
+font-size:25px;
+
+animation:float 8s linear infinite;
+
+}
+
+
+@keyframes float{
+
+from{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+to{
+
+transform:translateY(-120vh);
+
+opacity:0;
+
+}
+
+}
+
+
+
+/* Photos around letter */
+
+
+.photo{
+
+position:absolute;
+
+width:130px;
+
+height:130px;
+
+border-radius:20px;
+
+padding:8px;
+
+background:white;
+
+box-shadow:0 10px 30px rgba(0,0,0,.3);
+
+object-fit:cover;
+
+}
+
+
+
+.photo1{
+
+top:10%;
+
+left:5%;
+
+transform:rotate(-15deg);
+
+}
+
+
+.photo2{
+
+top:15%;
+
+right:5%;
+
+transform:rotate(15deg);
+
+}
+
+
+.photo3{
+
+bottom:10%;
+
+left:8%;
+
+transform:rotate(10deg);
+
+}
+
+
+.photo4{
+
+bottom:12%;
+
+right:8%;
+
+transform:rotate(-12deg);
+
+}
+
+
+
+/* Letter */
+
+
+.letter{
+
+
+width:650px;
+
+max-width:90%;
+
+background:#fff9f2;
+
+padding:50px;
+
+border-radius:15px;
+
+
+box-shadow:
+
+0 20px 60px rgba(0,0,0,.35);
+
+
+position:relative;
+
+z-index:5;
+
+
+animation:open 2s;
+
+
+}
+
+
+
+@keyframes open{
+
+from{
+
+transform:scale(.5);
+
+opacity:0;
+
+}
+
+to{
+
+transform:scale(1);
+
+opacity:1;
+
+}
+
+}
+
+
+
+h1{
+
+font-family:'Great Vibes',cursive;
+
+font-size:70px;
+
+text-align:center;
+
+color:#d6336c;
+
+}
+
+
+
+.message{
+
+
+font-family:'Dancing Script',cursive;
+
+font-size:30px;
+
+line-height:1.7;
+
+color:#6b3048;
+
+margin-top:25px;
+
+text-align:center;
+
+}
+
+
+
+
+/* Lip prints */
+
+
+.lips{
+
+position:absolute;
+
+font-size:55px;
+
+}
+
+
+
+.lip1{
+
+top:20px;
+
+right:30px;
+
+}
+
+
+
+.lip2{
+
+bottom:30px;
+
+left:30px;
+
+}
+
+
+
+
+button{
+
+display:block;
+
+margin:35px auto 0;
+
+padding:15px 40px;
+
+border:none;
+
+border-radius:50px;
+
+background:#d6336c;
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+}
+
+
+button:hover{
+
+transform:scale(1.1);
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<!-- Shivam photos -->
+
+<img class="photo photo1" src="photos/shivam1.png">
+
+<img class="photo photo2" src="photos/shivam2.png">
+
+<img class="photo photo3" src="photos/shivam3.png">
+
+<img class="photo photo4" src="photos/shivam4.png">
+
+
+
+<div class="letter">
+
+
+<div class="lips lip1">
+💋
+</div>
+
+
+<div class="lips lip2">
+💋
+</div>
+
+
+
+<h1>
+My Shivam ❤️
+</h1>
+
+
+<div class="message">
+
+
+My Babyy ❤️
+
+
+I don't know how I got so lucky
+to have someone like you in my life.
+
+
+You are the reason behind my biggest smiles,
+my happiest moments,
+and my sweetest memories.
+
+
+Thank you for loving me,
+understanding me,
+and always being my safe place.
+
+
+Your smile is my favorite thing,
+your happiness is my biggest wish,
+and your heart is my favorite home.
+
+
+I hope this birthday reminds you
+how special and loved you truly are.
+
+
+You are not just my boyfriend...
+
+You are my best friend,
+my happiness,
+and my forever person.
+
+
+I love you so much Shivam ❤️
+
+
+Forever yours 💋
+
+
+</div>
+
+
+
+<button onclick="nextPage()">
+
+Our Memories 📸
+
+</button>
+
+
+
+</div>
+
+
+
+<script>
+
+
+// hearts
+
+for(let i=0;i<40;i++){
+
+let h=document.createElement("div");
+
+h.className="heart";
+
+h.innerHTML="❤️";
+
+h.style.left=Math.random()*100+"vw";
+
+h.style.animationDuration=
+(5+Math.random()*5)+"s";
+
+
+document.body.appendChild(h);
+
+}
+
+
+
+function nextPage(){
+
+window.location.href="home4.html";
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
