@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 
 <meta charset="UTF-8">
@@ -8,461 +7,426 @@
 
 <title>Happy Birthday Shivam ❤️</title>
 
-
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
-
 
 <style>
 
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-
 
 body{
-
-height:100vh;
-
-overflow:hidden;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-background:
-radial-gradient(circle,#ff758c,#c31432);
-
-color:white;
-
-text-align:center;
-
+    min-height:100vh;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:radial-gradient(circle,#ff758c,#c31432);
+    font-family:'Dancing Script',cursive;
+    position:relative;
 }
-
-
 
 /* Fireworks */
 
-
 .firework{
-
-position:absolute;
-
-width:8px;
-
-height:8px;
-
-background:white;
-
-border-radius:50%;
-
-animation:explode 2s infinite;
-
+    position:absolute;
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    animation:explode 2s infinite;
 }
-
-
 
 @keyframes explode{
 
-
 0%{
-
 transform:scale(1);
-
 opacity:1;
-
 }
 
-
 100%{
-
 transform:
 translate(
 calc(-200px + 400px * var(--x)),
 calc(-200px + 400px * var(--y))
 )
 scale(0);
-
 opacity:0;
-
 }
 
 }
 
+/* Floating Hearts */
 
+.heart{
+    position:absolute;
+    font-size:30px;
+    animation:heart 6s linear infinite;
+}
 
+@keyframes heart{
+
+from{
+bottom:-50px;
+opacity:1;
+}
+
+to{
+bottom:110vh;
+opacity:0;
+}
+
+}
+
+/* Letter */
 
 .container{
 
-z-index:5;
-
-animation:show 3s;
-
-padding:30px;
+width:700px;
+max-width:90%;
+background:rgba(255,255,255,.15);
+backdrop-filter:blur(12px);
+padding:40px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 20px 60px rgba(0,0,0,.35);
+z-index:10;
+animation:show 2s;
 
 }
-
-
 
 @keyframes show{
 
 from{
-
 opacity:0;
-
-transform:scale(.3);
-
+transform:scale(.5);
 }
-
 
 to{
-
 opacity:1;
-
 transform:scale(1);
-
 }
 
 }
-
-
 
 h1{
 
-
 font-family:'Great Vibes',cursive;
-
 font-size:90px;
-
+color:white;
 text-shadow:
-
-0 0 20px white,
-0 0 40px pink;
-
+0 0 15px white,
+0 0 35px pink;
 
 }
-
-
 
 .name{
 
-font-family:'Dancing Script',cursive;
-
-font-size:60px;
-
+font-size:55px;
 margin:20px;
-
+color:white;
 
 }
-
-
-
 
 .message{
 
-
-font-family:'Dancing Script',cursive;
-
-font-size:35px;
-
-line-height:1.7;
-
-
-}
-
-
-
-.heart{
-
-position:absolute;
-
 font-size:30px;
-
-animation:heart 5s linear infinite;
-
-
-}
-
-
-
-@keyframes heart{
-
-
-from{
-
-bottom:-50px;
-
-opacity:1;
+line-height:1.7;
+color:white;
 
 }
-
-
-to{
-
-bottom:110vh;
-
-opacity:0;
-
-}
-
-}
-
-
-
-
 
 button{
 
-
-margin-top:35px;
-
-padding:15px 45px;
-
+margin-top:30px;
+padding:15px 40px;
 border:none;
-
 border-radius:50px;
-
-font-size:20px;
-
-background:white;
-
-color:#d6336c;
-
+font-size:22px;
 cursor:pointer;
-
+background:white;
+color:#d6336c;
+transition:.3s;
 
 }
-  .photo{
-    position:absolute;
-    width:170px;
-    height:170px;
-    object-fit:cover;
-    border:8px solid white;
-    border-radius:18px;
-    box-shadow:0 15px 35px rgba(0,0,0,.35);
-    z-index:3;
+
+button:hover{
+
+transform:scale(1.1);
+
+}
+
+/* Photos */
+
+.photo{
+
+position:absolute;
+width:180px;
+height:180px;
+object-fit:cover;
+border-radius:18px;
+border:8px solid white;
+box-shadow:0 15px 35px rgba(0,0,0,.35);
+transition:.3s;
+z-index:3;
+
+}
+
+.photo:hover{
+
+transform:scale(1.08);
+
 }
 
 .photo1{
-    top:40px;
-    left:40px;
-    transform:rotate(-12deg);
+
+top:35px;
+left:40px;
+transform:rotate(-12deg);
+
 }
 
 .photo2{
-    top:50px;
-    right:40px;
-    transform:rotate(10deg);
+
+top:70px;
+right:40px;
+transform:rotate(10deg);
+
 }
 
 .photo3{
-    bottom:40px;
-    left:50px;
-    transform:rotate(8deg);
+
+bottom:40px;
+left:60px;
+transform:rotate(8deg);
+
 }
 
 .photo4{
-    bottom:50px;
-    right:50px;
-    transform:rotate(-10deg);
+
+bottom:50px;
+right:60px;
+transform:rotate(-10deg);
+
 }
 
+/* Bows */
+
 .bow{
-    position:absolute;
-    font-size:45px;
-    z-index:4;
+
+position:absolute;
+font-size:45px;
+z-index:4;
+
 }
 
 .bow1{
-    top:15px;
-    left:170px;
+
+top:20px;
+left:180px;
+
 }
 
 .bow2{
-    top:20px;
-    right:170px;
+
+top:45px;
+right:180px;
+
 }
 
 .bow3{
-    bottom:180px;
-    left:180px;
+
+bottom:180px;
+left:190px;
+
 }
 
 .bow4{
-    bottom:190px;
-    right:180px;
+
+bottom:190px;
+right:190px;
+
 }
-
-
+  
 
 </style>
+  <body>
 
-</head>
-
-
-
-<body>
-
+<!-- 🎀 Bows -->
 <div class="bow bow1">🎀</div>
 <div class="bow bow2">🎀</div>
 <div class="bow bow3">🎀</div>
 <div class="bow bow4">🎀</div>
 
-<img class="photo photo1" src="photos/shivam1.png">
-<img class="photo photo2" src="photos/shivam2.png">
-<img class="photo photo3" src="photos/shivam3.png">
-<img class="photo photo4" src="photos/shivam4.png">
+<!-- 📸 Photos -->
+<img class="photo photo1" src="photos/shivam1.png" alt="Shivam 1">
+<img class="photo photo2" src="photos/shivam2.png" alt="Shivam 2">
+<img class="photo photo3" src="photos/shivam3.png" alt="Shivam 3">
+<img class="photo photo4" src="photos/shivam4.png" alt="Shivam 4">
 
+<!-- 💌 Love Letter -->
 <div class="container">
 
-<h1>Happy Birthday</h1>
+    <h1>Happy Birthday ❤️</h1>
 
+    <div class="name">
+        My Babyy Shivam ❤️
+    </div>
 
-<div class="name">
-    My Babyy Shivam ❤️
-</div>
-    
+    <div class="message">
 
+        I love you sooo muchhh ❤️
+        <br><br>
 
-<div class="message">
+        Thank you for coming into my life
+        and making it more beautiful.
+        <br><br>
 
+        You are my happiness,
+        my biggest blessing,
+        and my forever.
+        <br><br>
 
-I love you sooo muchhh ❤️
+        I hope your smile stays forever
+        and all your dreams come true.
+        <br><br>
 
+        No matter what happens,
+        I will always choose you.
+        <br><br>
 
-Thank you for coming into my life
-and making it more beautiful.
+        Happy Birthday My Love 🎂❤️
+        <br><br>
 
+        Forever yours 💋
 
-You are my happiness,
-my biggest blessing,
-and my forever.
+    </div>
 
-
-I hope your smile stays forever
-and all your dreams come true.
-
-
-No matter what happens,
-I will always choose you.
-
-
-Happy Birthday My Love 🎂❤️
-
-
-Forever yours 💋
-
-
-</div>
-
-
-
-<button onclick="love()">
-
-One More Surprise 💕
-
-</button>
-
+    <button onclick="love()">
+        One More Surprise 💕
+    </button>
 
 </div>
+    <script>
 
-
-
-
-
-<script>
-
-
-// fireworks
+// =====================
+// 🎆 FIREWORKS
+// =====================
 
 function fireworks(){
 
+    for(let i=0;i<80;i++){
 
-for(let i=0;i<80;i++){
+        let f=document.createElement("div");
 
+        f.className="firework";
 
-let f=document.createElement("div");
+        f.style.left="50%";
+        f.style.top="50%";
 
-f.className="firework";
+        f.style.setProperty("--x",Math.random());
+        f.style.setProperty("--y",Math.random());
 
+        f.style.background=
+        `hsl(${Math.random()*360},100%,70%)`;
 
-f.style.left="50%";
+        document.body.appendChild(f);
 
-f.style.top="50%";
+        setTimeout(()=>{
+            f.remove();
+        },2000);
 
-
-f.style.setProperty("--x",Math.random());
-
-f.style.setProperty("--y",Math.random());
-
-
-f.style.background=
-`hsl(${Math.random()*360},100%,70%)`;
-
-
-document.body.appendChild(f);
-
-
-setTimeout(()=>{
-
-f.remove();
-
-},2000);
-
+    }
 
 }
-
-
-}
-
-
 
 setInterval(fireworks,1500);
 
 
+// =====================
+// ❤️ FLOATING HEARTS
+// =====================
+
+for(let i=0;i<70;i++){
+
+    let h=document.createElement("div");
+
+    h.className="heart";
+
+    h.innerHTML="❤️";
+
+    h.style.left=Math.random()*100+"vw";
+
+    h.style.animationDuration=
+    (4+Math.random()*6)+"s";
+
+    h.style.fontSize=
+    (20+Math.random()*25)+"px";
+
+    document.body.appendChild(h);
+
+}
 
 
-// floating hearts
+// =====================
+// ✨ FLOATING SPARKLES
+// =====================
 
 for(let i=0;i<60;i++){
 
-let h=document.createElement("div");
+    let s=document.createElement("div");
 
-h.className="heart";
+    s.innerHTML="✨";
 
-h.innerHTML="❤️";
+    s.style.position="absolute";
 
+    s.style.left=Math.random()*100+"vw";
 
-h.style.left=Math.random()*100+"vw";
+    s.style.top=Math.random()*100+"vh";
 
-h.style.animationDuration=
-(4+Math.random()*6)+"s";
+    s.style.fontSize=
+    (15+Math.random()*20)+"px";
 
+    s.style.animation=
+    "heart "+(5+Math.random()*5)+"s linear infinite";
 
-document.body.appendChild(h);
+    s.style.opacity=".9";
 
+    document.body.appendChild(s);
 
 }
 
 
-
+// =====================
+// 💕 SURPRISE BUTTON
+// =====================
 
 function love(){
 
-alert(
-"❤️ I Love You Forever Shivam ❤️\n\nYou are my favorite person forever."
-);
+    alert(
+
+`❤️ Happy Birthday My Love ❤️
+
+You are my biggest blessing.
+
+Thank you for filling my life
+with happiness, love and smiles.
+
+I promise to always stand beside you,
+support you,
+care for you,
+and love you forever.
+
+You will always be my favourite person.
+
+Forever Yours 💋❤️`
+
+    );
 
 }
-
 
 </script>
 
 
 
-</body>
-
-</html>
