@@ -6,41 +6,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>For Shivam ❤️</title>
+<title>Happy Birthday Shivam ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
 <style>
-  /* Mobile Responsive */
-@media (max-width:768px){
-
-    .card{
-        width:95%;
-        padding:25px;
-        border-radius:20px;
-    }
-
-    h1{
-        font-size:42px;
-    }
-
-    .cake{
-        font-size:60px;
-    }
-
-    .message{
-        font-size:24px;
-        line-height:1.6;
-    }
-
-    button{
-        width:100%;
-        font-size:18px;
-        padding:15px;
-    }
-
-}
 
 *{
 margin:0;
@@ -48,55 +18,59 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
 
 body{
 
-min-height:100vh;
+font-family:'Poppins',sans-serif;
 
-background:
-linear-gradient(135deg,#ff758c,#ff7eb3);
+background:linear-gradient(135deg,#ff4d6d,#ff8fa3,#ffd6e0);
 
-display:flex;
+overflow-x:hidden;
 
-justify-content:center;
+min-height:100dvh;
 
-align-items:center;
+padding:25px;
 
-overflow:hidden;
-
-padding:30px;
+position:relative;
 
 }
 
-
-/* Background hearts */
+/* Floating Hearts */
 
 .heart{
 
-position:absolute;
+position:fixed;
 
 bottom:-50px;
 
-font-size:25px;
+font-size:22px;
+
+opacity:.8;
 
 animation:float 8s linear infinite;
 
-}
+pointer-events:none;
 
+z-index:1;
+
+}
 
 @keyframes float{
 
-from{
+0%{
 
-transform:translateY(0);
+transform:translateY(0) rotate(0deg);
 
 opacity:1;
 
 }
 
-to{
+100%{
 
-transform:translateY(-120vh);
+transform:translateY(-120vh) rotate(360deg);
 
 opacity:0;
 
@@ -104,365 +78,717 @@ opacity:0;
 
 }
 
+/* Sparkles */
 
+.sparkle{
 
-/* Photos around letter */
+position:fixed;
 
+width:4px;
 
-.photo{
-
-position:absolute;
-
-width:130px;
-
-height:130px;
-
-border-radius:20px;
-
-padding:8px;
+height:4px;
 
 background:white;
 
-box-shadow:0 10px 30px rgba(0,0,0,.3);
+border-radius:50%;
 
-object-fit:cover;
+animation:twinkle 2s infinite;
 
-}
-
-
-
-.photo1{
-
-top:10%;
-
-left:5%;
-
-transform:rotate(-15deg);
+z-index:1;
 
 }
 
+@keyframes twinkle{
 
-.photo2{
+50%{
 
-top:15%;
+opacity:.2;
 
-right:5%;
-
-transform:rotate(15deg);
-
-}
-
-
-.photo3{
-
-bottom:10%;
-
-left:8%;
-
-transform:rotate(10deg);
+transform:scale(.5);
 
 }
 
-
-.photo4{
-
-bottom:12%;
-
-right:8%;
-
-transform:rotate(-12deg);
-
 }
 
+/* Main Container */
 
-
-/* Letter */
-
-
-.letter{
-
-
-width:650px;
-
-max-width:90%;
-
-background:#fff9f2;
-
-padding:50px;
-
-border-radius:15px;
-
-
-box-shadow:
-
-0 20px 60px rgba(0,0,0,.35);
-
+.container{
 
 position:relative;
 
 z-index:5;
 
+max-width:1100px;
 
-animation:open 2s;
-
-
-}
-
-
-
-@keyframes open{
-
-from{
-
-transform:scale(.5);
-
-opacity:0;
+margin:auto;
 
 }
 
-to{
-
-transform:scale(1);
-
-opacity:1;
-
-}
-
-}
-
-
+/* Heading */
 
 h1{
 
 font-family:'Great Vibes',cursive;
 
-font-size:70px;
+font-size:72px;
 
 text-align:center;
 
-color:#d6336c;
+color:white;
+
+text-shadow:0 0 25px rgba(255,255,255,.7);
+
+margin-top:20px;
 
 }
 
+.subtitle{
 
+text-align:center;
 
-.message{
+font-size:22px;
 
+color:white;
 
-font-family:'Dancing Script',cursive;
+margin-top:15px;
 
-font-size:30px;
+margin-bottom:50px;
 
-line-height:1.7;
+font-weight:300;
 
-color:#6b3048;
+}
 
-margin-top:25px;
+/* Memory Cards */
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+gap:30px;
+
+}
+
+.card{
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(18px);
+
+border-radius:25px;
+
+padding:18px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+
+transition:.4s;
+
+overflow:hidden;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px) scale(1.03);
+
+}
+
+.card img{
+
+width:100%;
+
+height:320px;
+
+object-fit:cover;
+
+border-radius:18px;
+
+}
+
+.card h2{
+
+margin-top:18px;
+
+font-size:24px;
+
+color:white;
 
 text-align:center;
 
 }
 
+.card p{
 
+margin-top:12px;
 
+color:white;
 
-/* Lip prints */
+text-align:center;
 
+line-height:1.6;
 
-.lips{
-
-position:absolute;
-
-font-size:55px;
-
-}
-
-
-
-.lip1{
-
-top:20px;
-
-right:30px;
+font-size:16px;
 
 }
 
+/* Final Message */
 
+.final{
 
-.lip2{
+margin-top:60px;
 
-bottom:30px;
+background:rgba(255,255,255,.15);
 
-left:30px;
+backdrop-filter:blur(18px);
+
+padding:40px;
+
+border-radius:25px;
+
+text-align:center;
+
+color:white;
+
+box-shadow:0 15px 40px rgba(0,0,0,.25);
 
 }
 
-
-
+/* Button */
 
 button{
 
-display:block;
+margin-top:30px;
 
-margin:35px auto 0;
-
-padding:15px 40px;
+padding:16px 45px;
 
 border:none;
 
 border-radius:50px;
 
-background:#d6336c;
+background:white;
 
-color:white;
+color:#ff4d6d;
 
 font-size:20px;
 
+font-weight:bold;
+
 cursor:pointer;
 
-}
+transition:.3s;
 
+}
 
 button:hover{
 
-transform:scale(1.1);
+transform:scale(1.08);
 
 }
 
+/* Mobile */
+
+@media(max-width:768px){
+
+body{
+
+padding:18px;
+
+}
+
+h1{
+
+font-size:48px;
+
+}
+
+.subtitle{
+
+font-size:18px;
+
+margin-bottom:35px;
+
+}
+
+.card img{
+
+height:260px;
+
+}
+
+.card h2{
+
+font-size:22px;
+
+}
+
+.card p{
+
+font-size:15px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+}
 
 </style>
 
 </head>
+  <body>
 
+<div id="effects"></div>
 
+<div class="container">
 
-<body>
+<h1>Happy Birthday, Shivam ❤️</h1>
 
+<div class="subtitle">
 
-<!-- Shivam photos -->
+Every picture holds a memory...
+Every memory holds a smile...
+And every smile reminds me of You. 💖
 
-<img class="photo photo1" src="photos/shivam1.png">
-
-<img class="photo photo2" src="photos/shivam2.png">
-
-<img class="photo photo3" src="photos/shivam3.png">
-
-<img class="photo photo4" src="photos/shivam4.png">
-
-
-
-<div class="letter">
-
-
-<div class="lips lip1">
-💋
 </div>
 
+<div class="gallery">
 
-<div class="lips lip2">
-💋
+<!-- Card 1 -->
+
+<div class="card">
+
+<img src="photos/shivam1.png" alt="Memory 1">
+
+<h2>🌸 The Beginning</h2>
+
+<p>
+
+The day you entered my life,
+everything became brighter.
+Little did I know,
+my favorite person had finally arrived. ❤️
+
+</p>
+
 </div>
 
+<!-- Card 2 -->
 
+<div class="card">
 
-<h1>
-My Shivam ❤️
-</h1>
+<img src="photos/shivam2.png" alt="Memory 2">
 
+<h2>😊 My Favorite Smile</h2>
 
-<div class="message">
+<p>
 
+Every smile of yours
+has the magic to make my worst days
+feel beautiful again.
 
-My Babyy ❤️
+Keep smiling forever. 💕
 
+</p>
 
-I don't know how I got so lucky
-to have someone like you in my life.
+</div>
 
+<!-- Card 3 -->
 
-You are the reason behind my biggest smiles,
-my happiest moments,
-and my sweetest memories.
+<div class="card">
 
+<img src="photos/shivam3.png" alt="Memory 3">
 
-Thank you for loving me,
-understanding me,
-and always being my safe place.
+<h2>✨ Beautiful Memories</h2>
 
+<p>
 
-Your smile is my favorite thing,
-your happiness is my biggest wish,
-and your heart is my favorite home.
+Every memory we created
+became another reason
+for me to fall in love with you
+a little more every day.
 
+</p>
 
-I hope this birthday reminds you
-how special and loved you truly are.
+</div>
 
+<!-- Card 4 -->
 
-You are not just my boyfriend...
+<div class="card">
 
-You are my best friend,
+<img src="photos/shivam4.png" alt="Memory 4">
+
+<h2>💍 Forever Us</h2>
+
+<p>
+
+If someone asks me
+where my home is...
+
+I'll simply point towards you.
+
+❤️
+
+</p>
+
+</div>
+
+</div>
+  <!-- Birthday Wish -->
+
+<div class="final">
+
+<h2 style="font-family:'Great Vibes',cursive;font-size:58px;margin-bottom:20px;">
+
+A Birthday Wish For You 🎂❤️
+
+</h2>
+
+<p style="font-size:20px;line-height:1.9;">
+
+Happy Birthday to the most amazing,
+kind-hearted,
+handsome,
+and precious person in my life. ❤️
+
+Today isn't just another date...
+
+It's the day my favorite human
+came into this world.
+
+I hope this year brings you
+countless smiles,
+endless success,
+good health,
+peace,
+and every happiness your heart deserves.
+
+No matter what happens,
+I'll always be cheering for you,
+praying for you,
+and believing in you.
+
+Thank you for making my life
+so beautiful just by being in it.
+
+You are my biggest blessing,
+my safest place,
+my comfort,
 my happiness,
-and my forever person.
+and the most beautiful chapter
+of my story.
 
+I hope your birthday is filled with
+love,
+laughter,
+cake,
+beautiful memories,
+and lots of reasons to smile.
 
-I love you so much Shivam ❤️
+Because your smile...
 
+is my favorite view forever. ❤️
 
-Forever yours 💋
+</p>
 
+<div style="margin-top:35px;font-size:70px;">
+
+🎂🎈🎁❤️✨
 
 </div>
 
+<p style="margin-top:20px;font-size:22px;font-weight:500;">
 
+May all your dreams come true...
+
+and may I always be a part of them. 💖
+
+</p>
 
 <button onclick="nextPage()">
 
-press itt babyy🍆 📸
+🎁 One Last Surprise
 
 </button>
 
-
-
 </div>
-
-
+  </div>
 
 <script>
 
+// =========================
+// Floating Hearts ❤️
+// =========================
 
-// hearts
+const effects = document.getElementById("effects");
 
 for(let i=0;i<40;i++){
 
-let h=document.createElement("div");
+let heart=document.createElement("div");
 
-h.className="heart";
+heart.className="heart";
 
-h.innerHTML="❤️";
+heart.innerHTML="❤️";
 
-h.style.left=Math.random()*100+"vw";
+heart.style.left=Math.random()*100+"vw";
 
-h.style.animationDuration=
-(5+Math.random()*5)+"s";
+heart.style.fontSize=(16+Math.random()*18)+"px";
 
+heart.style.animationDuration=(5+Math.random()*6)+"s";
 
-document.body.appendChild(h);
+heart.style.animationDelay=Math.random()*5+"s";
+
+effects.appendChild(heart);
 
 }
 
+// =========================
+// Sparkles ✨
+// =========================
 
+for(let i=0;i<80;i++){
+
+let star=document.createElement("div");
+
+star.className="sparkle";
+
+star.style.left=Math.random()*100+"vw";
+
+star.style.top=Math.random()*100+"vh";
+
+star.style.animationDelay=Math.random()*2+"s";
+
+effects.appendChild(star);
+
+}
+
+// =========================
+// Card Fade Animation
+// =========================
+
+const cards=document.querySelectorAll(".card");
+
+const observer=new IntersectionObserver(entries=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.style.opacity="1";
+
+entry.target.style.transform="translateY(0)";
+
+}
+
+});
+
+},{
+threshold:.15
+});
+
+cards.forEach(card=>{
+
+card.style.opacity="0";
+
+card.style.transform="translateY(70px)";
+
+card.style.transition="all .8s ease";
+
+observer.observe(card);
+
+});
+// =========================
+// Photo Lightbox
+// =========================
+
+const lightbox=document.createElement("div");
+
+lightbox.style.position="fixed";
+lightbox.style.top="0";
+lightbox.style.left="0";
+lightbox.style.width="100%";
+lightbox.style.height="100%";
+lightbox.style.background="rgba(0,0,0,.88)";
+lightbox.style.display="none";
+lightbox.style.justifyContent="center";
+lightbox.style.alignItems="center";
+lightbox.style.flexDirection="column";
+lightbox.style.zIndex="9999";
+lightbox.style.backdropFilter="blur(10px)";
+
+const img=document.createElement("img");
+
+img.style.maxWidth="90%";
+img.style.maxHeight="80%";
+img.style.borderRadius="25px";
+img.style.boxShadow="0 0 40px rgba(255,255,255,.35)";
+img.style.transition=".4s";
+
+const text=document.createElement("div");
+
+text.innerHTML="❤️ Happy Birthday My Love ❤️";
+
+text.style.color="white";
+text.style.fontSize="28px";
+text.style.marginTop="25px";
+text.style.fontFamily="'Great Vibes',cursive";
+text.style.textAlign="center";
+
+lightbox.appendChild(img);
+lightbox.appendChild(text);
+
+document.body.appendChild(lightbox);
+
+document.querySelectorAll(".card img").forEach(photo=>{
+
+photo.style.cursor="pointer";
+
+photo.addEventListener("click",()=>{
+
+img.src=photo.src;
+
+lightbox.style.display="flex";
+
+});
+
+});
+
+lightbox.addEventListener("click",()=>{
+
+lightbox.style.display="none";
+
+});
+
+// =========================
+// Final Button
+// =========================
 
 function nextPage(){
 
+const btn=document.querySelector("button");
+
+btn.innerHTML="Loading... ❤️";
+
+btn.disabled=true;
+
+document.querySelector(".container").style.transition=".8s";
+document.querySelector(".container").style.opacity="0";
+document.querySelector(".container").style.transform="translateY(-40px)";
+
+setTimeout(()=>{
+
 window.location.href="home4.html";
+
+},800);
+
+}
+  // =========================
+// Mobile Optimizations
+// =========================
+
+// Always start from the top
+window.addEventListener("load",()=>{
+
+window.scrollTo(0,0);
+
+});
+
+// Prevent horizontal scrolling
+document.documentElement.style.overflowX="hidden";
+document.body.style.overflowX="hidden";
+
+// Smooth image loading
+document.querySelectorAll("img").forEach(image=>{
+
+image.loading="lazy";
+
+});
+
+// Small floating animation for cards
+document.querySelectorAll(".card").forEach((card,index)=>{
+
+card.style.animation=`floatCard 4s ease-in-out ${index*0.2}s infinite`;
+
+});
+
+const style=document.createElement("style");
+
+style.innerHTML=`
+
+@keyframes floatCard{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-8px);
+}
+
+100%{
+transform:translateY(0px);
+}
 
 }
 
+`;
+
+document.head.appendChild(style);
+
+// =========================
+// Birthday Confetti 🎉
+// =========================
+
+for(let i=0;i<80;i++){
+
+let confetti=document.createElement("div");
+
+confetti.innerHTML=["🎉","🎊","✨","💖","🎈"][Math.floor(Math.random()*5)];
+
+confetti.style.position="fixed";
+confetti.style.left=Math.random()*100+"vw";
+confetti.style.top="-50px";
+confetti.style.fontSize=(14+Math.random()*18)+"px";
+confetti.style.pointerEvents="none";
+confetti.style.animation=`confetti ${4+Math.random()*4}s linear infinite`;
+confetti.style.animationDelay=Math.random()*5+"s";
+
+effects.appendChild(confetti);
+
+}
+
+const confettiStyle=document.createElement("style");
+
+confettiStyle.innerHTML=`
+
+@keyframes confetti{
+
+0%{
+
+transform:translateY(-20px) rotate(0deg);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(120vh) rotate(720deg);
+
+opacity:0;
+
+}
+
+}
+
+`;
+
+document.head.appendChild(confettiStyle);
 
 </script>
 
-
 </body>
-
 </html>
