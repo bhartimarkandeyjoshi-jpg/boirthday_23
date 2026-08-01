@@ -24,29 +24,26 @@ html{
 
 body{
 
-    min-height:100vh;
+    min-height:100dvh;
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+
+    padding:25px;
+
+    overflow-x:hidden;
+    overflow-y:auto;
 
     background:linear-gradient(135deg,#ffafbd,#ffc3a0);
 
     font-family:'Poppins',sans-serif;
 
-    display:flex;
-
-    justify-content:center;
-
-    align-items:flex-start;
-
-    overflow-x:hidden;
-
-    overflow-y:auto;
-
-    padding:30px;
-
     position:relative;
 
 }
 
-/* Scrollbar */
+/* Custom Scrollbar */
 
 ::-webkit-scrollbar{
     width:8px;
@@ -58,7 +55,7 @@ body{
 }
 
 ::-webkit-scrollbar-track{
-    background:#ffe5ec;
+    background:#ffdce6;
 }
 
 /* Floating Roses */
@@ -69,11 +66,15 @@ body{
 
     bottom:-60px;
 
+    pointer-events:none;
+
     z-index:1;
 
-    animation:rise linear infinite;
+    animation-name:rise;
 
-    pointer-events:none;
+    animation-timing-function:linear;
+
+    animation-iteration-count:infinite;
 
 }
 
@@ -97,7 +98,7 @@ opacity:0;
 
 }
 
-/* Main Letter */
+/* Main Card */
 
 .letter{
 
@@ -106,22 +107,25 @@ opacity:0;
     z-index:5;
 
     width:100%;
-
     max-width:900px;
 
     background:rgba(255,248,240,.95);
+
+    backdrop-filter:blur(12px);
 
     border-radius:25px;
 
     padding:50px;
 
+    color:#6b3048;
+
     box-shadow:0 25px 60px rgba(0,0,0,.25);
 
-    animation:appear 1.2s ease;
+    animation:fadeIn 1.2s ease;
 
 }
 
-@keyframes appear{
+@keyframes fadeIn{
 
 from{
 
@@ -147,11 +151,11 @@ font-family:'Great Vibes',cursive;
 
 font-size:72px;
 
-color:#d6336c;
-
 text-align:center;
 
-margin-bottom:25px;
+color:#d6336c;
+
+margin-bottom:30px;
 
 text-shadow:0 0 10px rgba(214,51,108,.2);
 
@@ -165,9 +169,9 @@ font-size:32px;
 
 line-height:1.8;
 
-color:#6b3048;
-
 white-space:pre-line;
+
+color:#6b3048;
 
 }
 
@@ -184,8 +188,7 @@ font-size:55px;
 color:#d6336c;
 
 }
-
-button{
+    button{
 
 display:block;
 
@@ -209,21 +212,21 @@ cursor:pointer;
 
 transition:.3s;
 
-box-shadow:0 10px 25px rgba(214,51,108,.4);
+box-shadow:0 10px 25px rgba(214,51,108,.35);
 
 }
 
 button:hover{
 
-transform:scale(1.05);
+transform:translateY(-3px) scale(1.05);
 
 background:#b52a59;
 
 }
 
-/* Mobile */
+/* Mobile Responsive */
 
-@media(max-width:768px){
+@media (max-width:768px){
 
 body{
 
@@ -233,7 +236,7 @@ padding:15px;
 
 .letter{
 
-padding:25px;
+padding:28px 20px;
 
 border-radius:18px;
 
@@ -241,7 +244,9 @@ border-radius:18px;
 
 h1{
 
-font-size:46px;
+font-size:48px;
+
+margin-bottom:20px;
 
 }
 
@@ -271,7 +276,19 @@ padding:15px;
 
 }
 
-@media(max-width:480px){
+@media (max-width:480px){
+
+body{
+
+padding:12px;
+
+}
+
+.letter{
+
+padding:22px 16px;
+
+}
 
 h1{
 
@@ -283,11 +300,19 @@ font-size:38px;
 
 font-size:20px;
 
+line-height:1.65;
+
 }
 
 .signature{
 
 font-size:30px;
+
+}
+
+button{
+
+font-size:17px;
 
 }
 
@@ -306,68 +331,88 @@ font-size:30px;
 <h1>My Love ❤️</h1>
 
 <div class="text">
-Dear My Favorite Person,
+    Dear My Favorite Person,
 
 I don't know if words can ever truly explain
 how much you mean to me.
 
-You came into my life and made it brighter.
-You turned ordinary moments into beautiful memories.
+From the moment you entered my life,
+everything became brighter, warmer,
+and so much more beautiful.
 
-Your smile is my favorite view.
-Your voice is my favorite sound.
-Your happiness is my greatest wish.
+You turned ordinary days into unforgettable memories.
 
-Thank you for loving me.
-Thank you for understanding me.
-Thank you for always being by my side.
+Your smile is my favorite sunrise.
+Your laughter is my favorite melody.
+Your happiness is my biggest wish.
 
-Whenever life gets difficult,
-remember that you will never face it alone.
+Thank you for believing in me.
+Thank you for standing beside me.
+Thank you for making my world feel complete.
 
-I will always support you,
-believe in you,
-stand beside you,
-and love you with all my heart.
+No matter where life takes us,
+one thing will never change...
 
-You are not just my favorite person...
+I will always be here for you.
+
+I want to celebrate your victories,
+hold your hand during difficult days,
+and remind you every single day
+how truly amazing you are.
+
+Whenever you feel tired,
+remember that someone loves you
+more than words can ever express.
+
+You are not only my favorite person...
+
+You are my safe place.
+
+You are my peace.
 
 You are my home.
 
 Every heartbeat reminds me of you.
-Every dream I have somehow includes you.
-Every prayer I make secretly asks for your happiness.
+
+Every prayer I make
+includes your happiness.
+
+Every dream I have
+somehow has you in it.
 
 On your birthday,
-I don't wish for expensive gifts,
-or perfect moments...
+I don't wish for expensive gifts.
 
-I simply wish that your smile never fades.
+I don't wish for a perfect life.
 
-Because seeing you happy
-is my favorite feeling in the world.
+I only wish that your smile
+never disappears.
 
-Thank you for being my peace,
-my happiness,
-my comfort,
-my strength,
-and the most beautiful chapter of my life.
-
-No matter what happens...
+Because your smile
+is my favorite thing in this world.
 
 I promise...
 
-I'll always choose you.
+To support your dreams.
+
+To protect your heart.
+
+To stand beside you.
+
+To make beautiful memories with you.
+
+To choose you...
 
 Again...
 
 and again...
 
-and again...
+and forever.
 
 Happy Birthday My Love ❤️
 
 Forever Yours...
+
 </div>
 
 <div class="signature">
@@ -384,62 +429,98 @@ Our Memories 📸
 
 // Floating Roses
 
+const rosesContainer = document.getElementById("roses");
+
 for(let i=0;i<45;i++){
 
-let rose=document.createElement("div");
+    let rose=document.createElement("div");
 
-rose.className="rose";
+    rose.className="rose";
 
-rose.innerHTML="🌹";
+    rose.innerHTML="🌹";
 
-rose.style.left=Math.random()*100+"vw";
+    rose.style.left=Math.random()*100+"vw";
 
-rose.style.fontSize=(18+Math.random()*22)+"px";
+    rose.style.fontSize=(18+Math.random()*20)+"px";
 
-rose.style.animationDuration=(6+Math.random()*8)+"s";
+    rose.style.animationDuration=(6+Math.random()*8)+"s";
 
-rose.style.animationDelay=Math.random()*8+"s";
+    rose.style.animationDelay=Math.random()*8+"s";
 
-document.body.appendChild(rose);
+    rosesContainer.appendChild(rose);
 
-}function nextPage(){
+}
+    function nextPage(){
 
-    const button = document.querySelector("button");
+    const card=document.querySelector(".letter");
+    const button=document.querySelector("button");
 
-    button.innerHTML = "Loading... ❤️";
-    button.disabled = true;
+    button.disabled=true;
+    button.innerHTML="Loading... ❤️";
 
-    document.querySelector(".letter").style.transition = "0.8s";
-    document.querySelector(".letter").style.opacity = "0";
-    document.querySelector(".letter").style.transform = "translateY(-40px)";
+    card.style.transition="all .8s ease";
+    card.style.opacity="0";
+    card.style.transform="translateY(-40px) scale(.98)";
 
-    setTimeout(function(){
+    setTimeout(()=>{
 
-        window.location.href = "home3.html";
+        window.location.href="home3.html";
 
-    },700);
+    },800);
 
 }
 
-// Keep page always scrollable
-window.onload = function(){
+// Make sure page always starts at top
+
+window.addEventListener("load",()=>{
 
     window.scrollTo(0,0);
 
-};
+});
+
+// Small entrance effect
+
+window.addEventListener("load",()=>{
+
+    document.querySelector(".letter").style.opacity="1";
+
+});
+
+// Prevent horizontal scrolling
+
+document.documentElement.style.overflowX="hidden";
+document.body.style.overflowX="hidden";
+    // Optional: smooth fade-in when returning to this page
+document.addEventListener("DOMContentLoaded",()=>{
+
+    const card=document.querySelector(".letter");
+
+    card.style.opacity="0";
+    card.style.transform="translateY(30px)";
+
+    setTimeout(()=>{
+
+        card.style.transition="all 1s ease";
+        card.style.opacity="1";
+        card.style.transform="translateY(0)";
+
+    },100);
+
+});
+
+// Prevent accidental text selection while clicking button
+
+document.querySelector("button").addEventListener("mousedown",function(e){
+
+    e.preventDefault();
+
+});
+
+// Extra protection for mobile scrolling
+
+document.body.style.touchAction="pan-y";
 
 </script>
 
 </body>
-
-
-
-
-
-
-
-
-
-
-  
 </html>
