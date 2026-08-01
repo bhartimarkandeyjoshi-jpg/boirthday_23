@@ -8,11 +8,9 @@
 
 <title>A Letter For You ❤️</title>
 
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@500;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
-
-
-  <style>
+<style>
 
 *{
     margin:0;
@@ -30,21 +28,38 @@ body{
 
     background:linear-gradient(135deg,#ffafbd,#ffc3a0);
 
+    font-family:'Poppins',sans-serif;
+
     display:flex;
 
     justify-content:center;
 
     align-items:flex-start;
 
-    padding:40px 20px;
-
     overflow-x:hidden;
+
     overflow-y:auto;
 
-    font-family:Arial, sans-serif;
+    padding:30px;
+
+    position:relative;
 
 }
 
+/* Scrollbar */
+
+::-webkit-scrollbar{
+    width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#d6336c;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ffe5ec;
+}
 
 /* Floating Roses */
 
@@ -54,19 +69,17 @@ body{
 
     bottom:-60px;
 
-    font-size:30px;
+    z-index:1;
 
-    animation:rise 10s linear infinite;
+    animation:rise linear infinite;
 
     pointer-events:none;
-
-    z-index:1;
 
 }
 
 @keyframes rise{
 
-from{
+0%{
 
 transform:translateY(0) rotate(0deg);
 
@@ -74,9 +87,9 @@ opacity:1;
 
 }
 
-to{
+100%{
 
-transform:translateY(-120vh) rotate(360deg);
+transform:translateY(-130vh) rotate(360deg);
 
 opacity:0;
 
@@ -84,39 +97,37 @@ opacity:0;
 
 }
 
-
-/* Letter */
+/* Main Letter */
 
 .letter{
-
-    width:100%;
-    max-width:850px;
-
-    background:#fff8f0;
-
-    padding:50px;
-
-    border-radius:20px;
-
-    box-shadow:0 20px 50px rgba(0,0,0,.25);
-
-    color:#6b3048;
 
     position:relative;
 
     z-index:5;
 
-    animation:open 1.5s ease;
+    width:100%;
+
+    max-width:900px;
+
+    background:rgba(255,248,240,.95);
+
+    border-radius:25px;
+
+    padding:50px;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.25);
+
+    animation:appear 1.2s ease;
 
 }
 
-@keyframes open{
+@keyframes appear{
 
 from{
 
 opacity:0;
 
-transform:translateY(40px);
+transform:translateY(50px);
 
 }
 
@@ -132,490 +143,248 @@ transform:translateY(0);
 
 h1{
 
-    font-family:'Great Vibes',cursive;
-
-    font-size:70px;
-
-    color:#d6336c;
-
-    text-align:center;
-
-    margin-bottom:30px;
-
-}
-
-.text{
-
-    font-family:'Dancing Script',cursive;
-
-    font-size:32px;
-
-    line-height:1.8;
-
-    white-space:pre-line;
-
-}
-
-.signature{
-
-    font-family:'Great Vibes',cursive;
-
-    font-size:55px;
-
-    color:#d6336c;
-
-    text-align:right;
-
-    margin-top:30px;
-
-}
-
-button{
-
-    display:block;
-
-    margin:40px auto 0;
-
-    padding:16px 45px;
-
-    border:none;
-
-    border-radius:50px;
-
-    background:#d6336c;
-
-    color:#fff;
-
-    font-size:20px;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-button:hover{
-
-    transform:scale(1.05);
-
-    background:#b52a59;
-
-}
-
-
-/* ========================= */
-/* Mobile Responsive */
-/* ========================= */
-
-@media (max-width:768px){
-
-body{
-
-    padding:20px 12px;
-
-}
-
-.letter{
-
-    width:100%;
-
-    padding:25px 20px;
-
-    border-radius:15px;
-
-}
-
-h1{
-
-    font-size:48px;
-
-}
-
-.text{
-
-    font-size:24px;
-
-    line-height:1.7;
-
-}
-
-.signature{
-
-    font-size:36px;
-
-}
-
-button{
-
-    width:100%;
-
-    padding:16px;
-
-    font-size:18px;
-
-}
-
-.rose{
-
-    font-size:22px;
-
-}
-
-}
-
-/* Small Phones */
-
-@media (max-width:480px){
-
-h1{
-
-    font-size:38px;
-
-}
-
-.text{
-
-    font-size:20px;
-
-}
-
-.signature{
-
-    font-size:30px;
-
-}
-
-button{
-
-    font-size:17px;
-
-}
-
-}
-
-</style>
-body{
-
-min-height:100vh;
-
-background:
-linear-gradient(135deg,#ffafbd,#ffc3a0);
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-padding:30px;
-
-overflow:hidden;
-
-}
-
-
-
-/* Floating roses */
-
-
-.rose{
-
-position:absolute;
-
-bottom:-50px;
-
-font-size:30px;
-
-animation:rise 10s linear infinite;
-
-}
-
-
-
-@keyframes rise{
-
-
-from{
-
-transform:translateY(0) rotate(0);
-
-opacity:1;
-
-}
-
-
-to{
-
-transform:translateY(-120vh) rotate(360deg);
-
-opacity:0;
-
-}
-
-
-}
-
-
-
-
-/* Letter */
-
-
-.letter{
-
-
-background:#fff8f0;
-
-
-width:90%;
-
-max-width:850px;
-
-
-padding:50px;
-
-
-border-radius:15px;
-
-
-box-shadow:
-
-0 20px 50px rgba(0,0,0,.25);
-
-
-color:#6b3048;
-
-
-position:relative;
-
-
-animation:open 2s;
-
-
-}
-
-
-
-@keyframes open{
-
-
-from{
-
-opacity:0;
-
-transform:rotateX(90deg);
-
-}
-
-
-to{
-
-opacity:1;
-
-transform:rotateX(0);
-
-}
-
-}
-
-
-
-h1{
-
-
 font-family:'Great Vibes',cursive;
 
+font-size:72px;
 
-font-size:70px;
-
+color:#d6336c;
 
 text-align:center;
 
+margin-bottom:25px;
 
-color:#d6336c;
-
-
-margin-bottom:30px;
-
+text-shadow:0 0 10px rgba(214,51,108,.2);
 
 }
-
-
 
 .text{
 
-
 font-family:'Dancing Script',cursive;
-
 
 font-size:32px;
 
-
 line-height:1.8;
 
+color:#6b3048;
 
 white-space:pre-line;
 
-
 }
-
-
 
 .signature{
 
-
-font-family:'Great Vibes',cursive;
-
-
-font-size:55px;
-
+margin-top:35px;
 
 text-align:right;
 
+font-family:'Great Vibes',cursive;
 
-margin-top:30px;
-
+font-size:55px;
 
 color:#d6336c;
 
-
 }
-
-
 
 button{
 
-
 display:block;
 
-margin:40px auto 0;
+margin:45px auto 0;
 
-
-padding:15px 45px;
-
+padding:16px 45px;
 
 border:none;
 
-
-border-radius:40px;
-
+border-radius:50px;
 
 background:#d6336c;
 
-
 color:white;
-
 
 font-size:20px;
 
+font-weight:bold;
 
 cursor:pointer;
 
-
 transition:.3s;
 
+box-shadow:0 10px 25px rgba(214,51,108,.4);
 
 }
 
-
-
 button:hover{
 
-transform:scale(1.1);
+transform:scale(1.05);
 
 background:#b52a59;
 
 }
 
+/* Mobile */
 
+@media(max-width:768px){
+
+body{
+
+padding:15px;
+
+}
+
+.letter{
+
+padding:25px;
+
+border-radius:18px;
+
+}
+
+h1{
+
+font-size:46px;
+
+}
+
+.text{
+
+font-size:23px;
+
+line-height:1.7;
+
+}
+
+.signature{
+
+font-size:38px;
+
+}
+
+button{
+
+width:100%;
+
+font-size:18px;
+
+padding:15px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+h1{
+
+font-size:38px;
+
+}
+
+.text{
+
+font-size:20px;
+
+}
+
+.signature{
+
+font-size:30px;
+
+}
+
+}
 
 </style>
 
 </head>
 
-
-
 <body>
-
-
 
 <div id="roses"></div>
 
-
-
 <div class="letter">
 
-
-<h1>
-My Love ❤️
-</h1>
-
-
+<h1>My Love ❤️</h1>
 
 <div class="text">
-
-
 Dear My Favorite Person,
-
 
 I don't know if words can ever truly explain
 how much you mean to me.
 
 You came into my life and made it brighter.
-You turned normal moments into beautiful memories.
+You turned ordinary moments into beautiful memories.
 
 Your smile is my favorite view.
 Your voice is my favorite sound.
-And your happiness is something I will always care about.
+Your happiness is my greatest wish.
 
-Thank you for loving me,
-for understanding me,
-and for being my safe place.
+Thank you for loving me.
+Thank you for understanding me.
+Thank you for always being by my side.
 
-On your birthday, I want you to remember one thing...
+Whenever life gets difficult,
+remember that you will never face it alone.
 
-You are deeply loved.
-You are incredibly special.
-And you will always have a piece of my heart.
+I will always support you,
+believe in you,
+stand beside you,
+and love you with all my heart.
 
-I promise to keep making memories with you,
-to support your dreams,
-and to choose you again and again.
+You are not just my favorite person...
 
-Happy Birthday, My Love ❤️
+You are my home.
 
-Forever yours...
+Every heartbeat reminds me of you.
+Every dream I have somehow includes you.
+Every prayer I make secretly asks for your happiness.
 
+On your birthday,
+I don't wish for expensive gifts,
+or perfect moments...
 
+I simply wish that your smile never fades.
+
+Because seeing you happy
+is my favorite feeling in the world.
+
+Thank you for being my peace,
+my happiness,
+my comfort,
+my strength,
+and the most beautiful chapter of my life.
+
+No matter what happens...
+
+I promise...
+
+I'll always choose you.
+
+Again...
+
+and again...
+
+and again...
+
+Happy Birthday My Love ❤️
+
+Forever Yours...
 </div>
-
 
 <div class="signature">
-
 ❤️ Yours Always
-
 </div>
-
-
 
 <button onclick="nextPage()">
-
 Our Memories 📸
-
 </button>
 
-
 </div>
-
-
-
 
 <script>
 
+// Floating Roses
 
-// roses
-
-for(let i=0;i<40;i++){
+for(let i=0;i<45;i++){
 
 let rose=document.createElement("div");
 
@@ -625,25 +394,52 @@ rose.innerHTML="🌹";
 
 rose.style.left=Math.random()*100+"vw";
 
-rose.style.animationDuration=(5+Math.random()*8)+"s";
+rose.style.fontSize=(18+Math.random()*22)+"px";
+
+rose.style.animationDuration=(6+Math.random()*8)+"s";
 
 rose.style.animationDelay=Math.random()*8+"s";
 
-rose.style.fontSize=(20+Math.random()*20)+"px";
-
 document.body.appendChild(rose);
 
+}function nextPage(){
+
+    const button = document.querySelector("button");
+
+    button.innerHTML = "Loading... ❤️";
+    button.disabled = true;
+
+    document.querySelector(".letter").style.transition = "0.8s";
+    document.querySelector(".letter").style.opacity = "0";
+    document.querySelector(".letter").style.transform = "translateY(-40px)";
+
+    setTimeout(function(){
+
+        window.location.href = "home3.html";
+
+    },700);
+
 }
 
-function nextPage(){
+// Keep page always scrollable
+window.onload = function(){
 
-window.location.href="home3.html";
+    window.scrollTo(0,0);
 
-}
+};
 
 </script>
 
-
 </body>
 
+
+
+
+
+
+
+
+
+
+  
 </html>
